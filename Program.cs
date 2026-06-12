@@ -1,6 +1,8 @@
 ﻿using HotelBookingAPI.Data;
-using Microsoft.EntityFrameworkCore;
+using HotelBookingAPI.Helpers;
+using HotelBookingAPI.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
@@ -68,6 +70,10 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 });
+
+// Register Services
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<JwtHelper>();
 
 var app = builder.Build();
 

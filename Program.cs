@@ -36,6 +36,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddScoped<IRoomService, RoomService>();
 
 // Swagger with JWT support
 builder.Services.AddSwaggerGen(c =>

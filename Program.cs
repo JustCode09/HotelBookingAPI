@@ -1,4 +1,4 @@
-﻿using HotelBookingAPI.Datas;
+﻿using HotelBookingAPI.Data;
 using HotelBookingAPI.Helpers;
 using HotelBookingAPI.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;

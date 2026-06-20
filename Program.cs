@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Database
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration
+    options.UseNpgsql(builder.Configuration
     .GetConnectionString("DefaultConnection")));
 
 // JWT Authentication

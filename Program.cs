@@ -79,15 +79,14 @@ builder.Services.AddScoped<IBookingService, BookingService>();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
+
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "Hotel Booking API v1");
         c.RoutePrefix = "swagger";
     });
-}
+
 
 app.UseHttpsRedirection();
 app.UseAuthentication();

@@ -2,7 +2,7 @@
 using HotelBookingAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace HotelBookingAPI.Controllers
+namespace HotelBookingAPI.Controllerss
 {
     [ApiController]
     [Route("api/[controller]")]
